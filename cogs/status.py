@@ -2,16 +2,16 @@ import discord
 from discord.ext import commands
 PREFIX = '.'
 INTENTS = discord.Intents.default()
-client = discord.Client(commands_prefix=PREFIX, intents=INTENTS)
+bot = discord.Client(commands_prefix=PREFIX, intents=INTENTS)
 
 class Status(commands.Cog):
-  def __init__(self, client):
-    self.client = client
+  def __init__(self, bot):
+    self.bot = bot
 
 
   async def on_ready():
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"Your servers"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"Your servers"))
 
 
-def setup(client):
-    client.add_cog(Status(client))
+def setup(bot):
+    bot.add_cog(Status(bot))
