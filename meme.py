@@ -1,7 +1,10 @@
+
 import discord
 from discord.ext import commands
 import aiohttp
 import random
+import os
+
 
 PREFIX = '.'
 INTENTS = discord.Intents.default()
