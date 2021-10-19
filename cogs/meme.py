@@ -16,7 +16,7 @@ class meme(commands.Cog):
     async def meme(ctx):
         async with aiohttp.ClientSesssion() as cs:
             async with cs.get(
-                    "https://www.reddit.com/r/islamichistorymeme.json") as r:
+                    "https://www.reddit.com/r/IslamicHistoryMeme.json") as r:
                 memes = await r.json()
                 embed = discord.Embed(color=discord.Color.gray())
                 embed.set_image(url=memes["data"]["children"][random.randit(
