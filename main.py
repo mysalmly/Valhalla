@@ -1,10 +1,8 @@
 import discord
 from discord.ext import commands
-from discord.ext
 import os
-PREFIX = '.'
 INTENTS = discord.Intents.default()
-client = discord.Client(commands_prefix=PREFIX, intents=INTENTS)
+client = commands.Bot(command_prefix='.')
 
 
 @client.event
