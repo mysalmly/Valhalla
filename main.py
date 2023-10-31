@@ -24,15 +24,15 @@ async def ping(ctx, self):
 async def meme(ctx):
         async with aiohttp.ClientSesssion() as cs:
             async with cs.get(
-                    "https://www.reddit.com/r/IslamicHistoryMeme.json") as r:
+                    "https://www.reddit.com/r/REDDITSUB.json") as r:
                 memes = await r.json()
                 embed = discord.Embed(color=discord.Color.gray())
                 embed.set_image(url=memes["data"]["children"][random.randit(
                     0, 100)]["data"]["url"])
                 embed.set_footer(
-                    text=f"Powered by r/islamichistorymeme | meme requested by {ctx.author}"
+                    text=f"Powered by r/REDDITSUB | meme requested by {ctx.author}"
                 )
                 await ctx.send(embed=embed)
 
 
-client.run('ODk5NzMzMzY2MzI3MzQ1MTgy.YW3D_g.rkzoA31nHEeFgWArayZ66XcKfS0')
+client.run('TOKEN')
